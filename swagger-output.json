@@ -5,10 +5,10 @@
     "description": "Sports Car Garage API",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "garage-api-909j.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/vehicles/": {

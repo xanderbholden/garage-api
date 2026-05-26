@@ -5,8 +5,8 @@ const doc = {
     title: 'Garage API',
     description: 'Sports Car Garage API'
   },
-  host: 'localhost:3000',
-  schemes: ['http']
+  host: 'garage-api-909j.onrender.com',
+  schemes: ['https']
 };
 
 const outputFile = './swagger-output.json';
