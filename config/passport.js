@@ -1,13 +1,16 @@
 const passport = require('passport');
 const GitHubStrategy = require('passport-github2').Strategy;
 
+const callbackURL =
+  process.env.CALLBACK_URL ||
+  'https://garage-api-909j.onrender.com/auth/github/callback';
+
 passport.use(
   new GitHubStrategy(
     {
       clientID: process.env.GITHUB_CLIENT_ID,
       clientSecret: process.env.GITHUB_CLIENT_SECRET,
-      callbackURL:
-        process.env.CALLBACK_URL || 'http://localhost:3000/auth/github/callback'
+      callbackURL
     },
     function (accessToken, refreshToken, profile, done) {
       return done(null, profile);
