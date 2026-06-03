@@ -236,7 +236,47 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "vehicleModel": {
+                  "type": "string",
+                  "example": "NSX"
+                },
+                "serviceType": {
+                  "type": "string",
+                  "example": "Timing Belt and Water Pump Replacement"
+                },
+                "cost": {
+                  "type": "number",
+                  "example": 1850
+                },
+                "mechanic": {
+                  "type": "string",
+                  "example": "Acura Performance Specialists"
+                },
+                "mileage": {
+                  "type": "number",
+                  "example": 47000
+                },
+                "serviceDate": {
+                  "type": "string",
+                  "example": "2026-05-28"
+                },
+                "notes": {
+                  "type": "string",
+                  "example": "Replaced timing belt, water pump, drive belts, coolant, and performed full inspection of the V6 engine."
+                }
+              }
+            }
+          }
+        ]
       }
     },
     "/maintenance/{id}": {
@@ -270,6 +310,44 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "vehicleModel": {
+                  "type": "string",
+                  "example": "NSX"
+                },
+                "serviceType": {
+                  "type": "string",
+                  "example": "Timing Belt and Water Pump Replacement"
+                },
+                "cost": {
+                  "type": "number",
+                  "example": 1900
+                },
+                "mechanic": {
+                  "type": "string",
+                  "example": "Acura Performance Specialists"
+                },
+                "mileage": {
+                  "type": "number",
+                  "example": 47500
+                },
+                "serviceDate": {
+                  "type": "string",
+                  "example": "2026-05-29"
+                },
+                "notes": {
+                  "type": "string",
+                  "example": "Updated NSX maintenance record after additional inspection."
+                }
+              }
+            }
           }
         ],
         "responses": {
