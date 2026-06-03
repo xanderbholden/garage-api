@@ -7,7 +7,9 @@ const isAuthenticated = require('../middleware/authenticate');
 router.get('/', maintenanceController.getAll);
 router.get('/:id', maintenanceController.getSingle);
 
-router.post('/', isAuthenticated, (req, res) => {
+router.post(
+  '/',
+  isAuthenticated,
   /* #swagger.parameters['body'] = {
     in: 'body',
     required: true,
@@ -21,10 +23,12 @@ router.post('/', isAuthenticated, (req, res) => {
       notes: 'Replaced timing belt, water pump, drive belts, coolant, and performed full inspection of the V6 engine.'
     }
   } */
-  maintenanceController.createMaintenance(req, res);
-});
+  maintenanceController.createMaintenance
+);
 
-router.put('/:id', isAuthenticated, (req, res) => {
+router.put(
+  '/:id',
+  isAuthenticated,
   /* #swagger.parameters['body'] = {
     in: 'body',
     required: true,
@@ -38,8 +42,8 @@ router.put('/:id', isAuthenticated, (req, res) => {
       notes: 'Updated NSX maintenance record after additional inspection.'
     }
   } */
-  maintenanceController.updateMaintenance(req, res);
-});
+  maintenanceController.updateMaintenance
+);
 
 router.delete('/:id', isAuthenticated, maintenanceController.deleteMaintenance);
 
