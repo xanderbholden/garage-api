@@ -25,6 +25,54 @@
       },
       "post": {
         "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "make": {
+                  "type": "string",
+                  "example": "Subaru"
+                },
+                "model": {
+                  "type": "string",
+                  "example": "WRX Premium"
+                },
+                "year": {
+                  "type": "number",
+                  "example": 2022
+                },
+                "color": {
+                  "type": "string",
+                  "example": "WR Blue Pearl"
+                },
+                "vin": {
+                  "type": "string",
+                  "example": "JF1VBAA61N9012345"
+                },
+                "mileage": {
+                  "type": "number",
+                  "example": 16000
+                },
+                "fuelType": {
+                  "type": "string",
+                  "example": "Premium Gasoline"
+                },
+                "transmission": {
+                  "type": "string",
+                  "example": "Manual"
+                },
+                "owner": {
+                  "type": "string",
+                  "example": "Xander Holden"
+                }
+              }
+            }
+          }
+        ],
         "responses": {
           "201": {
             "description": "Created"
@@ -72,6 +120,52 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "make": {
+                  "type": "string",
+                  "example": "Subaru"
+                },
+                "model": {
+                  "type": "string",
+                  "example": "WRX Premium"
+                },
+                "year": {
+                  "type": "number",
+                  "example": 2022
+                },
+                "color": {
+                  "type": "string",
+                  "example": "WR Blue Pearl"
+                },
+                "vin": {
+                  "type": "string",
+                  "example": "JF1VBAA61N9012345"
+                },
+                "mileage": {
+                  "type": "number",
+                  "example": 16500
+                },
+                "fuelType": {
+                  "type": "string",
+                  "example": "Premium Gasoline"
+                },
+                "transmission": {
+                  "type": "string",
+                  "example": "Manual"
+                },
+                "owner": {
+                  "type": "string",
+                  "example": "Xander Holden"
+                }
+              }
+            }
           }
         ],
         "responses": {
